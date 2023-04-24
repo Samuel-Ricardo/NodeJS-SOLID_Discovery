@@ -8,3 +8,16 @@ test('Create an appointment', () => {
   expect(appointment).toBeInstanceOf(Appointment)
   expect(appointment.customer).toEqual(VALID_APPOINTMENT_DATA().customer)
 })
+
+test('cannot create an appointment with end date vefore start date', () => {
+  const valid_data = VALID_APPOINTMENT_DATA();
+  
+  const endsAt = new Date();
+  endsAt.setDate(valid_data.startsAt.getDate() - 1)
+
+  expect(new Appointment({
+    ...valid_data,
+    endsAt,
+  })).toThrow()
+
+})
