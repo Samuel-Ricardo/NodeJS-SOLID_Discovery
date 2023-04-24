@@ -5,7 +5,7 @@ export class Appointment {
 
   constructor (props:IAppointmentProps){ this.props = props }  
 
-  get customer () { return this.props.costumer }
+  get customer () { return this.props.customer }
 
   get startsAt () { return this.props.startsAt }
 

@@ -1,5 +1,5 @@
 export interface IAppointmentProps {
-  costumer: string
+  customer: string
   startsAt: Date
   endsAt: Date
 }
