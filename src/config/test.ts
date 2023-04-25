@@ -6,7 +6,8 @@ export const VALID_APPOINTMENT_DATA = () => {
   const startsAt = new Date();
   const endsAt = new Date()
 
-  endsAt.setDate(startsAt.getDate() + 1)
+  startsAt.setDate(startsAt.getDate() + 1)
+  endsAt.setDate(startsAt.getDate() + 2)
 
   return {
     customer: 'John Doe',

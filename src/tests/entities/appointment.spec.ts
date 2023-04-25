@@ -25,8 +25,7 @@ test('Should not be able to create a appointment with start date before now', ()
   
     const data = VALID_APPOINTMENT_DATA();
 
-    data.startsAt.setDate(data.startsAt.getDate() - 1);
-    data.endsAt.setDate(data.endsAt.getDate() +2);
+    data.startsAt.setDate(data.startsAt.getDate() - 10);
 
     expect(() => new Appointment(data)).toThrow()
 })
