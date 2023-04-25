@@ -1,6 +1,6 @@
-import { Appointment } from "@/entities/appointment";
+import { Appointment } from "@Entities/appointment";
 
 export interface IAppointmentsRepository {
   create(appointment: Appointment): Promise<void>;
-  save(appointment: Appointment): Promise<Void>;
+  findOverlappingAppointment(startsAt: Date, endsAt: Date): Promise<Appointment | null>;
 }
