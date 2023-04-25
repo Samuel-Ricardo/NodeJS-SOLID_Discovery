@@ -8,6 +8,8 @@ export class Appointment {
     const {endsAt, startsAt} = props
 
     if (endsAt <= startsAt) throw new Error("Invalid end Date")
+    if (startsAt < new Date()) throw new Error("Invalid Starts Date")
+
 
     this.props = props 
   }  

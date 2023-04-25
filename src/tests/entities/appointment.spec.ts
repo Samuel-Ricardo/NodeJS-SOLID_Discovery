@@ -28,5 +28,5 @@ test('Should not be able to create a appointment with start date before now', ()
     data.startsAt.setDate(data.startsAt.getDate() - 1);
     data.endsAt.setDate(data.endsAt.getDate() +2);
 
-    expect(new Appointment(data)).toThrow()
+    expect(() => new Appointment(data)).toThrow()
 })
