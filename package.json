@@ -20,6 +20,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "date-fns": "^2.29.3",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.30.1"
   }
