@@ -18,6 +18,15 @@ test('cannot create an appointment with end date before start date', () => {
   expect(() => new Appointment({
     ...valid_data,
     endsAt,
-  })).toThrow()
+  })).toThrow() 
+})
 
+test('Should not be able to create a appointment with start date before now', () => {
+  
+    const data = VALID_APPOINTMENT_DATA();
+
+    data.startsAt.setDate(data.startsAt.getDate() - 1);
+    data.endsAt.setDate(data.endsAt.getDate() +2);
+
+    expect(new Appointment(data)).toThrow()
 })
