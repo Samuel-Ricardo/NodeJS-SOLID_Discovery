@@ -36,7 +36,8 @@
       "@Types": ["./src/@types/index.d.ts"],
       "@Types/*": ["./src/@types/*"],
       "@Entities/*": ["./src/entities/*"],
-      "@Utils/*": ["./src/utils/*"] 
+      "@Utils/*": ["./src/utils/*"],
+      //"@Repositories/*"["./"]
     },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
